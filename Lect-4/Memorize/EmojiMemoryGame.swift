@@ -7,9 +7,6 @@
 
 import SwiftUI
 // viewModel is Intermediary between (Model & View)
-
-
-
 class EmojiMemoryGame: ObservableObject {
     
 //    type variables
@@ -26,7 +23,6 @@ class EmojiMemoryGame: ObservableObject {
     
     
     var cards: Array<MemoryGame<String>.Card> {
-        
         return model.cards
     }
 

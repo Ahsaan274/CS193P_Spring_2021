@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-
     @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
-        
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]){
                     ForEach(viewModel.cards){ card in
@@ -23,13 +21,11 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(/*@START_MENU_TOKEN@*/.red/*@END_MENU_TOKEN@*/)
-        
         .padding(.horizontal)
     }
 }
 
 struct CardView: View {
-
     let card: MemoryGame<String>.Card
     var body: some View {
         ZStack{
@@ -39,7 +35,6 @@ struct CardView: View {
                 shape.strokeBorder(lineWidth: 3)
                 Text(card.content).font(.largeTitle)
             } else if card.isMatched{
-//                0 means transparent , and 1 is fully visible 
                 shape.opacity(0)
             }
             else{
